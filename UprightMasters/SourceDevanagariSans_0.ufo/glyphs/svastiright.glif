@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="svastiright" format="1">
+  <advance width="941"/>
+  <outline>
+    <contour>
+      <point x="146" y="-70" type="line"/>
+      <point x="510" y="-70" type="line"/>
+      <point x="510" y="212" type="line"/>
+      <point x="714" y="212" type="line"/>
+      <point x="714" y="-73" type="line"/>
+      <point x="792" y="-73" type="line"/>
+      <point x="792" y="290" type="line"/>
+      <point x="510" y="290" type="line"/>
+      <point x="510" y="494" type="line"/>
+      <point x="795" y="494" type="line"/>
+      <point x="795" y="572" type="line"/>
+      <point x="432" y="572" type="line"/>
+      <point x="432" y="290" type="line"/>
+      <point x="228" y="290" type="line"/>
+      <point x="228" y="575" type="line"/>
+      <point x="149" y="575" type="line"/>
+      <point x="149" y="212" type="line"/>
+      <point x="432" y="212" type="line"/>
+      <point x="432" y="8" type="line"/>
+      <point x="146" y="8" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>mask</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>svastiright</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>941</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

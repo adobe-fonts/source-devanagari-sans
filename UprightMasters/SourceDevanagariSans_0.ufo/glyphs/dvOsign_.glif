@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dvOsign" format="1">
+  <advance width="214"/>
+  <outline>
+    <contour>
+      <point x="86" y="0" type="line"/>
+      <point x="128" y="0" type="line"/>
+      <point x="128" y="529" type="line"/>
+      <point x="86" y="529" type="line"/>
+    </contour>
+    <contour>
+      <point x="-10" y="550" type="line"/>
+      <point x="-10" y="510" type="line"/>
+      <point x="224" y="510" type="line"/>
+      <point x="224" y="550" type="line"/>
+    </contour>
+    <contour>
+      <point x="-182" y="790" type="curve" smooth="yes"/>
+      <point x="-210" y="790"/>
+      <point x="-227" y="784"/>
+      <point x="-259" y="771" type="curve"/>
+      <point x="-237" y="725" type="line"/>
+      <point x="-210" y="736"/>
+      <point x="-190" y="742"/>
+      <point x="-169" y="742" type="curve" smooth="yes"/>
+      <point x="-73" y="742"/>
+      <point x="28" y="606"/>
+      <point x="73" y="548" type="curve"/>
+      <point x="120" y="548" type="line"/>
+      <point x="30" y="662"/>
+      <point x="-58" y="790"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>mask</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>dvOsign</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>214</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>
