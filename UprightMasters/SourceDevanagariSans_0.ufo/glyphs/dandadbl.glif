@@ -2,18 +2,8 @@
 <glyph name="dandadbl" format="1">
   <advance width="468"/>
   <outline>
-    <contour>
-      <point x="126" y="-40" type="line"/>
-      <point x="168" y="-40" type="line"/>
-      <point x="168" y="590" type="line"/>
-      <point x="126" y="590" type="line"/>
-    </contour>
-    <contour>
-      <point x="300" y="-40" type="line"/>
-      <point x="342" y="-40" type="line"/>
-      <point x="342" y="590" type="line"/>
-      <point x="300" y="590" type="line"/>
-    </contour>
+    <component base="danda"/>
+    <component base="danda" xOffset="174"/>
   </outline>
   <lib>
     <dict>
@@ -42,6 +32,13 @@
           <integer>468</integer>
         </dict>
       </dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.4</real>
+        <real>0.8</real>
+        <real>1.0</real>
+        <real>1.0</real>
+      </array>
     </dict>
   </lib>
 </glyph>

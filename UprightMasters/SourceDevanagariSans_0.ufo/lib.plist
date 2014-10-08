@@ -808,6 +808,13 @@
 				<string>cedillacmb.cap</string>
 				<string>fi</string>
 				<string>fl</string>
+				<string>dvDDha.copy_1</string>
+				<string>dvNna.copy_1</string>
+				<string>dvDda.copy_1</string>
+				<string>dvDDhYa.copy_1</string>
+				<string>dvDdYa.copy_1</string>
+				<string>dvTTa.copy_1</string>
+				<string>dvLLa.copy_1</string>
 			</array>
 			<key>type</key>
 			<string>glyphList</string>
