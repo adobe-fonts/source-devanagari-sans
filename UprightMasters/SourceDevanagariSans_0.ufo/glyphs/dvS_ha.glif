@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dvSha" format="1">
+	<advance width="590"/>
+	<outline>
+		<contour>
+			<point x="101" y="166" type="curve"/>
+			<point x="130" y="100"/>
+			<point x="198" y="24"/>
+			<point x="249" y="-3" type="curve"/>
+			<point x="274" y="38" type="line"/>
+			<point x="227" y="63"/>
+			<point x="178" y="106"/>
+			<point x="156" y="154" type="curve" smooth="yes"/>
+			<point x="131" y="206"/>
+			<point x="110" y="256"/>
+			<point x="69" y="256" type="curve" smooth="yes"/>
+			<point x="47" y="256"/>
+			<point x="28" y="237"/>
+			<point x="28" y="216" type="curve" smooth="yes"/>
+			<point x="28" y="168"/>
+			<point x="68" y="134"/>
+			<point x="140" y="134" type="curve" smooth="yes"/>
+			<point x="214" y="134"/>
+			<point x="328" y="224"/>
+			<point x="328" y="392" type="curve" smooth="yes"/>
+			<point x="328" y="490"/>
+			<point x="271" y="552"/>
+			<point x="194" y="552" type="curve" smooth="yes"/>
+			<point x="141" y="552"/>
+			<point x="92" y="503"/>
+			<point x="92" y="439" type="curve" smooth="yes"/>
+			<point x="92" y="348"/>
+			<point x="162" y="298"/>
+			<point x="262" y="250" type="curve"/>
+			<point x="276" y="284" type="line"/>
+			<point x="182" y="326"/>
+			<point x="132" y="376"/>
+			<point x="132" y="434" type="curve" smooth="yes"/>
+			<point x="132" y="486"/>
+			<point x="162" y="512"/>
+			<point x="200" y="512" type="curve" smooth="yes"/>
+			<point x="248" y="512"/>
+			<point x="286" y="466"/>
+			<point x="286" y="396" type="curve" smooth="yes"/>
+			<point x="286" y="244"/>
+			<point x="212" y="176"/>
+		</contour>
+		<contour>
+			<point x="462" y="0" type="line"/>
+			<point x="504" y="0" type="line"/>
+			<point x="504" y="529" type="line"/>
+			<point x="462" y="529" type="line"/>
+		</contour>
+		<contour>
+			<point x="366" y="550" type="line"/>
+			<point x="366" y="510" type="line"/>
+			<point x="600" y="510" type="line"/>
+			<point x="600" y="550" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.typemytype.robofont.layerData</key>
+			<dict>
+				<key>mask</key>
+				<dict>
+					<key>anchors</key>
+					<array>
+					</array>
+					<key>components</key>
+					<array>
+					</array>
+					<key>contours</key>
+					<array>
+					</array>
+					<key>lib</key>
+					<dict>
+					</dict>
+					<key>name</key>
+					<string>dvSha</string>
+					<key>unicodes</key>
+					<array>
+					</array>
+					<key>width</key>
+					<integer>590</integer>
+				</dict>
+			</dict>
+		</dict>
+	</lib>
+</glyph>

@@ -1,0 +1,21 @@
+include (mark-pre.fea);
+
+feature abvm { # Above-base mark positioning
+	include (abvm.fea);
+	include (abvmcxt.fea);
+} abvm;
+
+feature blwm { # Below-base mark positioning
+	include (blwm.fea);
+#	include (../../context.blwm);
+} blwm;
+
+#--------------------------------------
+
+feature mark {
+	include (mark.fea);
+} mark;
+
+feature mkmk {
+	include (mkmk.fea);
+} mkmk;

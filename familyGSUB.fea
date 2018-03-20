@@ -1,0 +1,805 @@
+@ABVM = [@MC_abvmBINDU @MC_abvmTOP]; # @MC_abvmREPH];
+@RAKARS = [dvRakar dvRakarU dvRakarUu dvRakarVirama];
+@VIRAMA = [dvVirama];
+@BLWM = [dvUsign dvUsign.a dvUusign dvUusign.a dvRvocalsign dvRrvocalsign dvLvocalsign dvLlvocalsign dvUesign dvUuesign dvAnudatta];
+@BLWM_NO_NUKTA = [@MC_blwmBOTTOM]; # @MC_blwmRUKAR];
+@IKARS = [dvIsign dvIsign.a dvIsign.b dvIsign.c dvIsign.d dvIsign.e dvIsign.f dvIsign.g dvIsign.h dvIsign.i dvIsign.j dvIsign.k dvIsign.l dvIsign.m dvIsign.n dvIsign.o dvIsign.p dvIsign.q dvIsign.r dvIsign.s dvIsign.t dvIsign.u dvIsign.v dvIsign.w dvIsign.x dvIsign.y dvIsign.z dvIsign.A dvIsign.B dvIsign.C dvIsign.D dvIsign.E dvIsign.F dvIsign.G dvIsign.H dvIsign.I dvIsign.J dvIsign.K dvIsign.L dvIsign.M];
+
+#---------------------------------------
+@HALVES = [dvK dvK.a dvK.b dvKR dvKSs dvKh dvKh.a dvG dvGR dvGh dvGhR dvC dvC.a dvJ dvJ.a dvJ.b dvJJ dvJJ.a dvJJ.b dvJNy dvJh dvJh.NEP dvJh.NEP2 dvNy dvNn dvT dvT.a dvT.b dvTT dvTR dvTh dvDh dvDhR dvN dvN.a dvN.b dvNnn dvNnn.a dvNnn.b dvP dvPR dvPh dvPh.a dvPh.b dvB dvB.a dvBh dvBhR dvM dvY dvRr dvL dvL.a dvLl dvLll dvV dvV.a dvSh dvSh.MAR dvShR dvSs dvSsR dvS dvS.a dvS.b dvSR dvQ dvQ.a dvQ.b dvQR dvKhh dvKhh.a dvGhh dvZ dvZ.a dvZ.b dvZZ dvZZ.a dvZZ.b dvF dvYy dvGg dvJj dvBb dvBb.a dvZh dvZh.a dvZh.b dvYh];
+# @WHOLES = [dvKa dvKa dvKa dvKRa dvKSsa dvKha dvKha dvGa dvGRa dvGha dvGhRa dvCa dvCa dvJa dvJa dvJa dvJJa dvJJa dvJJa dvJNya dvJha dvJha.NEP dvJha.NEP2 dvNya dvNna dvTa dvTa dvTa dvTTa dvTRa dvTha dvDha dvDhRa dvNa dvNa dvNa dvNnna dvNnna dvNnna dvPa dvPRa dvPha dvPha dvPha dvBa dvBa dvBha dvBhRa dvMa dvYa dvRra dvLa dvLa dvLla dvLlla dvVa dvVa dvSha dvSha.MAR dvShRa dvSsa dvSsRa dvSa dvSa dvSa dvSRa dvQa dvQa dvQa dvQRa dvKhha dvKhha dvGhha dvZa dvZa dvZa dvZZa dvZZa dvZZa dvFa dvYya dvGga dvJja dvBba dvBba dvZha dvZha dvZha dvYha];
+@LETTERS_MAJUSCULE_LATIN = [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AE Lslash Oslash OE Eth Thorn];
+
+@FIGURES_LINING_TABULAR = [zero one two three four five six seven eight nine dvZero.tnum dvOne.tnum dvTwo.tnum dvThree.tnum dvFour.tnum dvFive.tnum dvSix.tnum dvSeven.tnum dvEight.tnum dvNine.tnum dvOne.tnma dvFive.tnma dvEight.tnma dvNine.tnma rupeeindian];
+@FIGURES_LINING_PROPORTIONAL = [zero.pnum one.pnum two.pnum three.pnum four.pnum five.pnum six.pnum seven.pnum eight.pnum nine.pnum dvZero dvOne dvTwo dvThree dvFour dvFive dvSix dvSeven dvEight dvNine dvOne.a dvFive.a dvEight.a dvNine.a rupeeindian.pnum];
+
+@SORTS_DFLT = [exclam question quotesingle quotedbl quoteleft quoteright quotedblleft quotedblright asterisk];
+@SORTS_LATN = [exclam.latn question.latn quotesingle.latn quotedbl.latn quoteleft.latn quoteright.latn quotedblleft.latn quotedblright.latn asterisk.latn];
+
+@MARKS_CMB_LAT = [gravecmb acutecmb circumflexcmb tildecmb dieresiscmb macroncmb brevecmb ringcmb dotaccentcmb caroncmb candrabinducmb cedillacmb];
+@MARKS_CMB_LAT_CASE = [gravecmb.cap acutecmb.cap circumflexcmb.cap tildecmb.cap dieresiscmb.cap macroncmb.cap brevecmb.cap ringcmb.cap dotaccentcmb.cap caroncmb.cap candrabinducmb.cap cedillacmb.cap];
+
+#--------------------------------------
+feature ccmp {
+
+	lookup COMPOSE {
+		sub G macronbelowcmb H macronbelowcmb by GHmacronbelow;
+		sub G macrondoublebelowcmb H by GHmacronbelow;
+		sub G macronbelowcmb h macronbelowcmb by Ghmacronbelow;
+		sub G macronbelowcmb hlinebelow by Ghmacronbelow;
+		sub G macrondoublebelowcmb h by Ghmacronbelow;
+		sub g macronbelowcmb h macronbelowcmb by ghmacronbelow;
+		sub g macronbelowcmb hlinebelow by ghmacronbelow;
+		sub g macrondoublebelowcmb h by ghmacronbelow;
+		sub K macronbelowcmb H macronbelowcmb by KHmacronbelow;
+		sub Klinebelow H macronbelowcmb by KHmacronbelow;
+		sub K macrondoublebelowcmb H by KHmacronbelow;
+		sub K macronbelowcmb h macronbelowcmb by Khmacronbelow;
+		sub Klinebelow hlinebelow by Khmacronbelow;
+		sub K macrondoublebelowcmb h by Khmacronbelow;
+		sub k macronbelowcmb h macronbelowcmb by khmacronbelow;
+		sub klinebelow hlinebelow by khmacronbelow;
+		sub k macrondoublebelowcmb h by khmacronbelow;
+	} COMPOSE;
+
+	lookup MAJUCSULE_ACCENTS_CMB_CONTEXT { # substitutes combining marks for miniscules with forms for majuscules
+		sub @LETTERS_MAJUSCULE_LATIN @MARKS_CMB_LAT' by @MARKS_CMB_LAT_CASE;
+	} MAJUCSULE_ACCENTS_CMB_CONTEXT;
+
+} ccmp;
+
+#--------------------------------------
+feature locl { # Localized Forms
+
+	script latn;
+		language dflt;
+			sub @SORTS_DFLT by @SORTS_LATN;
+
+	script dev2;
+		language MAR;
+			lookup MAR_ALTS {
+				sub [dvLa dvSha] by [dvLa.MAR dvSha.MAR]; # ल श
+			} MAR_ALTS;
+
+		language SAN;
+			lookup SAN_ALTS {
+				sub dvLa by dvLa.MAR;
+			} SAN_ALTS;
+
+		language NEP;
+			lookup NEP_ALTS {
+				sub dvJha by dvJha.NEP;
+			} NEP_ALTS;
+
+	script deva;
+		language MAR;
+			lookup MAR_ALTS;
+		language SAN;
+			lookup SAN_ALTS;
+		language NEP;
+			lookup NEP_ALTS;
+
+} locl;
+
+#--------------------------------------
+feature nukt { # Nukta Forms
+	sub dvNa dvNukta by dvNnna;
+	sub dvRa dvNukta by dvRra;
+	sub dvLla dvNukta by dvLlla;
+	sub dvKa dvNukta by dvQa;
+	sub dvKha dvNukta by dvKhha;
+	sub dvGa dvNukta by dvGhha;
+	sub dvJa dvNukta by dvZa;
+	sub dvDda dvNukta by dvDddha;
+	sub dvDdha dvNukta by dvRha;
+	sub dvPha dvNukta by dvFa;
+	sub dvYa dvNukta by dvYya;
+} nukt;
+
+#--------------------------------------
+feature akhn { # akhand forms
+	lookup AKHN {
+		sub dvKa dvVirama dvSsa by dvKSsa;
+		sub dvJa dvVirama dvNya by dvJNya;
+
+	} AKHN;
+
+} akhn;
+
+#--------------------------------------
+feature rphf {
+
+	lookup REPH_MAR {
+		lookupflag MarkAttachmentType @VIRAMA;
+			sub dvRa' dvVirama' ZWJ by dvReph.MAR; # र्‍क (plus Ka) broken in InDesign? 
+			sub dvRra' dvVirama' by dvReph.MAR; # ऱ्क (plus Ka)
+	} REPH_MAR;
+
+	lookup REPH {
+		lookupflag MarkAttachmentType @VIRAMA;
+			sub dvRa dvVirama by dvReph; # र्क (plus Ka)
+	} REPH;
+
+} rphf;
+
+#--------------------------------------
+#feature rkrf { # Rakar Forms
+#} rkrf;
+
+#--------------------------------------
+feature blwf { # Below-Base Forms
+
+	script dev2;
+		language dflt;
+			lookup blwf_dev2 {
+				sub dvVirama dvRa by dvRakar;
+			} blwf_dev2;
+
+			lookup RAKARS {
+				lookupflag MarkAttachmentType @RAKARS;
+				sub dvCha dvRakar dvYa by dvChRYa;
+				sub dvDdha dvRakar dvYa by dvDdhRYa;
+				sub dvKa dvRakar by dvKRa;
+				sub dvKSsa dvRakar by dvKSsRa;
+				sub dvKha dvRakar by dvKhRa;
+				sub dvGa dvRakar by dvGRa;
+				sub dvGha dvRakar by dvGhRa;
+				sub dvCa dvRakar by dvCRa;
+				sub dvJa dvRakar by dvJRa;
+				sub dvJha dvRakar by dvJhRa;
+				sub dvNya dvRakar by dvNyRa;
+				sub dvNna dvRakar by dvNnRa;
+				sub dvTa dvRakar by dvTRa;
+				sub dvTha dvRakar by dvThRa;
+				sub dvDa dvRakar by dvDRa;
+				sub dvDha dvRakar by dvDhRa;
+				sub dvNa dvRakar by dvNRa;
+				sub dvNnna dvRakar by dvNnnRa;
+				sub dvPa dvRakar by dvPRa;
+				sub dvPha dvRakar by dvPhRa;
+				sub dvBa dvRakar by dvBRa;
+				sub dvBha dvRakar by dvBhRa;
+				sub dvMa dvRakar by dvMRa;
+				sub dvYa dvRakar by dvYRa;
+				sub dvLa dvRakar by dvLRa;
+				sub dvVa dvRakar by dvVRa;
+				sub dvSha dvRakar by dvShRa;
+				sub dvSsa dvRakar by dvSsRa;
+				sub dvSa dvRakar by dvSRa;
+				sub dvHa dvRakar by dvHRa;
+				sub dvQa dvRakar by dvQRa;
+				sub dvKhha dvRakar by dvKhhRa;
+				sub dvGhha dvRakar by dvGhhRa;
+				sub dvZa dvRakar by dvZRa;
+				sub dvFa dvRakar by dvFRa;
+				sub dvYya dvRakar by dvYyRa;
+
+			} RAKARS;
+
+			lookup RAKARS_CLEANUP {
+				lookupflag MarkAttachmentType @VIRAMA;
+				sub dvChRYa dvVirama by dvChRYa;
+				sub dvDdhRYa dvVirama by dvDdhRYa;
+			} RAKARS_CLEANUP;
+
+	script deva;
+		language dflt;
+			lookup blwf_deva {
+				sub dvRa dvVirama by dvRakar;
+			} blwf_deva;
+
+			lookup RAKARS;
+			lookup RAKARS_CLEANUP;
+
+} blwf;
+
+#--------------------------------------
+feature half { # Half Forms
+	lookupflag MarkAttachmentType @VIRAMA;
+
+	sub dvKSsa dvVirama by dvKSs;
+	sub dvJNya dvVirama by dvJNy;
+	sub dvJa dvVirama dvJa dvVirama by dvJJ;
+	sub dvZa dvVirama dvZa dvVirama by dvZZ;
+	sub dvTa dvVirama dvTa dvVirama by dvTT;
+	sub dvTRa dvVirama by dvTR;
+
+	sub dvKa dvVirama by dvK;
+	sub dvKha dvVirama by dvKh;
+	sub dvGa dvVirama by dvG;
+	sub dvGha dvVirama by dvGh;
+	sub dvCa dvVirama by dvC;
+	sub dvJa dvVirama by dvJ;
+	sub dvJha dvVirama by dvJh;
+	sub dvJha.NEP dvVirama by dvJh.NEP;
+	sub dvNya dvVirama by dvNy;
+	sub dvNna dvVirama by dvNn;
+	sub dvTa dvVirama by dvT;
+	sub dvTha dvVirama by dvTh;
+	sub dvDha dvVirama by dvDh;
+	sub dvNa dvVirama by dvN;
+	sub dvNnna dvVirama by dvNnn;
+	sub dvPa dvVirama by dvP;
+	sub dvPha dvVirama by dvPh;
+	sub dvBa dvVirama by dvB;
+	sub dvBha dvVirama by dvBh;
+	sub dvMa dvVirama by dvM;
+	sub dvYa dvVirama by dvY;
+	sub dvRra dvVirama by dvRr;
+	sub dvLa dvVirama by dvL;
+	sub dvLa.MAR dvVirama by dvL;
+	sub dvLla dvVirama by dvLl;
+	sub dvLlla dvVirama by dvLll;
+	sub dvVa dvVirama by dvV;
+	sub dvSha dvVirama by dvSh;
+	sub dvSha.MAR dvVirama by dvSh.MAR;
+	sub dvSsa dvVirama by dvSs;
+	sub dvSa dvVirama by dvS;
+	sub dvQa dvVirama by dvQ;
+	sub dvKhha dvVirama by dvKhh;
+	sub dvGhha dvVirama by dvGhh;
+	sub dvZa dvVirama by dvZ;
+	sub dvFa dvVirama by dvF;
+	sub dvYya dvVirama by dvYy;
+	sub dvGga dvVirama by dvGg;
+	sub dvJja dvVirama by dvJj;
+	sub dvBba dvVirama by dvBb;
+	sub dvZha dvVirama by dvZh;
+	sub dvYha dvVirama by dvYh;
+
+	sub dvKRa dvVirama by dvKR;
+	sub dvGRa dvVirama by dvGR;
+	sub dvGhRa dvVirama by dvGhR;
+	sub dvDhRa dvVirama by dvDhR;
+	sub dvPRa dvVirama by dvPR;
+	sub dvBhRa dvVirama by dvBhR;
+	sub dvShRa dvVirama by dvShR;
+	sub dvSsRa dvVirama by dvSsR;
+	sub dvSRa dvVirama by dvSR;
+	sub dvQRa dvVirama by dvQR;
+
+} half;
+
+lookup NA_C2 {
+	sub @HALVES [dvNa dvNnna]' by [dvNa.c2 dvNnna.c2];
+} NA_C2;
+
+#--------------------------------------
+feature cjct { # Conjunct Forms
+
+	lookup CONJUNCTS_NO_HALF {
+		lookupflag MarkAttachmentType @VIRAMA;
+		sub dvTta dvVirama dvTta dvVirama dvYa by dvTtTtYa;
+		sub dvTtha dvVirama dvTtha dvVirama dvYa by dvTthTthYa;
+		sub dvDda dvVirama dvDda dvVirama dvYa by dvDdDdYa;
+		sub dvDdha dvVirama dvDdha dvVirama dvYa by dvDdhDdhYa;
+		sub dvDa dvVirama dvDa dvVirama dvYa by dvDDYa;
+		sub dvDa dvVirama dvDh dvYa by dvDDhYa;
+		sub dvDa dvVirama dvBh dvYa by dvDBhYa;
+		sub dvDRa dvVirama dvYa by dvDRYa;
+		sub dvDa dvVirama dvV dvYa by dvDVYa;
+		sub dvSs dvTta dvVirama dvVa by dvSsTtVa;
+		sub dvHa dvVirama dvM dvYa by dvHMYa;
+
+		sub dvNga dvVirama dvKa by dvNgKa;
+		sub dvNga dvVirama dvKRa by dvNgKRa;
+		sub dvNga dvVirama dvKSsa by dvNgKSsa;
+		sub dvNga dvVirama dvKha by dvNgKha;
+		sub dvNga dvVirama dvGa by dvNgGa;
+		sub dvNga dvVirama dvGha by dvNgGha;
+		sub dvNga dvVirama dvYa by dvNgYa;
+		sub dvNga dvVirama dvMa by dvNgMa;
+		sub dvCha dvVirama dvYa by dvChYa;
+		sub dvCha dvVirama dvVa by dvChVa;
+		sub dvTta dvVirama dvTta by dvTtTta;
+		sub dvTta dvVirama dvTtha by dvTtTtha;
+		sub dvTta dvVirama dvDdha by dvTtDdha;
+		sub dvTta dvVirama dvYa by dvTtYa;
+		sub dvTta dvVirama dvVa by dvTtVa;
+		sub dvTtha dvVirama dvTtha by dvTthTtha;
+		sub dvTtha dvVirama dvYa by dvTthYa;
+		sub dvDda dvVirama dvTta by dvDdTta;
+		sub dvDda dvVirama dvDda by dvDdDda;
+		sub dvDda dvVirama dvDdha by dvDdDdha;
+		sub dvDda dvVirama dvYa by dvDdYa;
+		sub dvDdha dvVirama dvDdha by dvDdhDdha;
+		sub dvDdha dvVirama dvYa by dvDdhYa;
+		sub dvDa dvVirama dvGa by dvDGa;
+		sub dvDa dvVirama dvGRa by dvDGRa;
+		sub dvDa dvVirama dvGha by dvDGha;
+		sub dvDa dvVirama dvDa by dvDDa;
+		sub dvDa dvVirama dvDha by dvDDha;
+		sub dvDa dvVirama dvNa by dvDNa;
+		sub dvDa dvVirama dvBa by dvDBa;
+		sub dvDa dvVirama dvBRa by dvDBRa;
+		sub dvDa dvVirama dvBha by dvDBha;
+		sub dvDa dvVirama dvMa by dvDMa;
+		sub dvDa dvVirama dvYa by dvDYa;
+		sub dvDa dvVirama dvVa by dvDVa;
+		sub dvDa dvVirama dvVRa by dvDVRa;
+		sub dvHa dvVirama dvNna by dvHNna;
+		sub dvHa dvVirama dvNa by dvHNa;
+		sub dvHa dvVirama dvMa by dvHMa;
+		sub dvHa dvVirama dvYa by dvHYa;
+		sub dvHa dvVirama dvLa by dvHLa;
+		sub dvHa dvVirama dvVa by dvHVa;
+	} CONJUNCTS_NO_HALF;
+
+} cjct;
+
+#--------------------------------------
+# All of the following external lookups must happen before <pres> is applied
+
+lookup PRES_CC {
+	lookupflag MarkAttachmentType @VIRAMA;
+	sub dvG dvN dvYa by dvGNYa;
+	sub dvNy dvC dvYa by dvNyCYa;
+	sub dvNy dvJ dvYa by dvNyJYa;
+	sub dvDh dvN dvYa by dvDhNYa;
+	sub dvT dvN dvYa by dvTNYa;
+	sub dvN dvN dvYa by dvNNYa;
+
+	sub dvK dvTRa by dvKTRa;
+	sub dvK dvCa by dvKCa;
+	sub dvK dvJa by dvKJa;
+	sub dvK dvNa by dvKNa;
+	sub dvK dvVa by dvKVa;
+	sub dvK dvSsa by dvKSsa;
+	sub dvKSs dvMa by dvKSsMa;
+	sub dvKSs dvYa by dvKSsYa;
+	sub dvK dvSha by dvKSha;
+	sub dvK dvSha.MAR by dvKSha.MAR;
+	sub dvKh dvNa by dvKhNa;
+	sub dvG dvNa by dvGNa;
+	sub dvGR dvYa by dvGRYa;
+	sub dvGh dvNa by dvGhNa;
+	sub dvC dvCa by dvCCa;
+	sub dvC dvCha by dvCCha;
+	sub dvC dvChVa by dvCChVa;
+	sub dvC dvNa by dvCNa;
+	sub dvJ dvJa by dvJJa;
+	sub dvJ dvNya by dvJNya;
+	sub dvJNy dvYa by dvJNyYa;
+	sub dvJ dvNa by dvJNa;
+	sub dvJh dvNa by dvJhNa;
+	sub dvNy dvCa by dvNyCa;
+	sub dvNy dvJa by dvNyJa;
+	sub dvNy dvSha by dvNySha;
+	sub dvT dvTa by dvTTa;
+	sub dvT dvNa by dvTNa;
+	sub dvT dvYa by dvTYa;
+	sub dvTR dvYa by dvTRYa;
+	sub dvDh dvNa by dvDhNa;
+	sub dvN dvCa by dvNCa;
+	sub dvN dvNa by dvNNa;
+	sub dvN dvBha by dvNBha;
+	sub dvN dvMa by dvNMa;
+	sub dvN dvSha by dvNSha;
+	sub dvN dvSha.MAR by dvNSha.MAR;
+	sub dvP dvTta by dvPTta;
+	sub dvP dvTa by dvPTa;
+	sub dvP dvNa by dvPNa;
+	sub dvB dvNa by dvBNa;
+	sub dvB dvSha by dvBSha;
+	sub dvBhR dvYa by dvBhRYa;
+	sub dvM dvNa by dvMNa;
+	sub dvM dvBha by dvMBha;
+	sub dvM dvSha by dvMSha;
+	sub dvM dvHa by dvMHa;
+	sub dvL dvKa by dvLKa;
+	sub dvL dvCa by dvLCa;
+	sub dvL dvJa by dvLJa;
+	sub dvL dvTha by dvLTha;
+	sub dvL dvBha by dvLBha;
+	sub dvL dvZa by dvLZa;
+	sub dvSh dvCa by dvShCa;
+	sub dvSh dvNa by dvShNa;
+	sub dvShR dvYa by dvShRYa;
+	sub dvSh dvVa by dvShVa;
+	sub dvSs dvTta by dvSsTta;
+	sub dvSs dvTtYa by dvSsTtYa;
+	sub dvSs dvTtha by dvSsTtha;
+	sub dvSs dvTthYa by dvSsTthYa;
+	sub dvS dvDda by dvSDda;
+	sub dvS dvTRa by dvSTRa;
+	sub dvS dvTha by dvSTha;
+	sub dvS dvNa by dvSNa;
+	sub dvS dvYa by dvSYa;
+	sub dvS dvPRa by dvSPRa;
+	sub dvQ dvSha by dvQSha;
+	sub dvZ dvZa by dvZZa;
+} PRES_CC;
+
+lookup PRES_HALF {
+	sub [dvK dvQ dvPh]' [@MMK_R_Ra @MMK_R_Ga @MMK_R_Bha] by [dvK.a dvQ.a dvPh.a];
+	sub [dvK dvQ dvPh]' [@MMK_R_Gha @MMK_R_Dda @MMK_R_Ha @MMK_R_JNya] by [dvK.b dvQ.b dvPh.b];
+	sub [dvKh dvKhh]' [@MMK_R_Cha @MMK_R_Nna @MMK_R_Pa] by [dvKh.a dvKhh.a];
+	sub dvC' [@MMK_R_Gha @MMK_R_Bha @MMK_R_Sha] by dvC.a;
+	sub [dvJ dvJJ dvZ dvZZ dvZh]' [@MMK_R_Da @MMK_R_Ta @MMK_R_Tha @MMK_R_Na @MMK_R_La] by [dvJ.a dvJJ.a dvZ.a dvZZ.a dvZh.a];
+	sub [dvJ dvJJ dvZ dvZZ dvZh]' [@MMK_R_Ra @MMK_R_Ga @MMK_R_Bha] by [dvJ.b dvJJ.b dvZ.b dvZZ.b dvZh.b];
+	sub dvT' [@MMK_R_Ra @MMK_R_Ga @MMK_R_Bha @MMK_R_KSsa] by dvT.a;
+	sub dvT' [@MMK_R_Gha @MMK_R_Ca @MMK_R_Dda] by dvT.b;
+	sub [dvN dvNnn]' [@MMK_R_Gha @MMK_R_Da @MMK_R_KSsa @MMK_R_Ha] by [dvN.a dvNnn.a];
+	sub [dvN dvNnn]' [@MMK_R_Ra @MMK_R_Ga @MMK_R_Bha] by [dvN.b dvNnn.b];
+	sub dvL' [@MMK_R_Ra @MMK_R_Ga @MMK_R_Da @MMK_R_Ta @MMK_R_Na @MMK_R_Bha @MMK_R_Tha @MMK_R_La @MMK_R_KSsa] by dvL.a;
+	sub [dvB dvV dvBb]' [@MMK_R_Nna @MMK_R_Pa] by [dvB.a dvV.a dvBb.a];
+	sub dvS' [@MMK_R_Ra @MMK_R_Ga @MMK_R_Dda @MMK_R_Da @MMK_R_Ta @MMK_R_Pa] by dvS.a;
+	sub dvS' [@MMK_R_Gha @MMK_R_Ca @MMK_R_Bha @MMK_R_Ha] by dvS.b;
+} PRES_HALF;
+
+lookup ABVS_LIGS {
+	lookupflag MarkAttachmentType @ABVM;
+
+	sub dvIisign dvReph dvAnusvara by dvIisignRephAnusvara;
+	sub dvEsign dvReph dvAnusvara by dvEsignRephAnusvara;
+	sub dvAisign dvReph dvAnusvara by dvAisignRephAnusvara;
+	sub dvOsign dvReph dvAnusvara by dvOsignRephAnusvara;
+	sub dvAusign dvReph dvAnusvara by dvAusignRephAnusvara;
+
+	sub dvReph dvAnusvara by dvRephAnusvara;
+
+	sub dvIisign dvReph by dvIisignReph;
+	sub dvEsign dvReph by dvEsignReph;
+	sub dvAisign dvReph by dvAisignReph;
+	sub dvOsign dvReph by dvOsignReph;
+	sub dvAusign dvReph by dvAusignReph;
+
+	sub dvIi dvAnusvara by dvIiAnusvara;
+
+} ABVS_LIGS;
+
+lookup CV_LIGS {
+lookupflag MarkAttachmentType @BLWM;
+	sub dvKSsa dvUsign by dvKSsU;
+	sub dvJNya dvUsign by dvJNyU;
+	sub dvJha dvUsign by dvJhU;
+	sub dvDa dvUsign by dvDU;
+	sub dvDa dvUusign by dvDUu;
+	sub dvDa dvRvocalsign by dvDRvocal;
+	sub dvRa dvUsign by dvRU;
+	sub dvRa dvUusign by dvRUu;
+	sub dvRa dvRvocalsign by dvRRvocal;
+	sub dvRa dvRrvocalsign by dvRRrvocal;
+	sub dvRa dvLvocalsign by dvRLvocal;
+	sub dvRa dvLlvocalsign by dvRLlvocal;
+	sub dvSha dvRvocalsign by dvShRvocal;
+	sub dvSha.MAR dvRvocalsign by dvShRvocal.MAR;
+	sub dvHa dvUsign by dvHU;
+	sub dvHa dvUusign by dvHUu;
+	sub dvHa dvRvocalsign by dvHRvocal;
+} CV_LIGS;
+
+lookup RAKAR_LIGS {
+#lookupflag MarkAttachmentType @BLWM;
+	sub dvRakar dvUsign by dvRakarU;
+	sub dvRakar dvUusign by dvRakarUu;
+	sub dvRakar dvVirama by dvRakarVirama;
+} RAKAR_LIGS;
+
+lookup CJCT_VERT { # Vertical stacking conjunct forms
+	sub dvK [dvT dvT.a] dvVa by dvKTVa;
+
+	sub dvK dvKa by dvKKa;
+	sub dvK dvTa by dvKTa;
+	sub dvK dvTYa by dvKTYa;
+	sub dvK dvYa by dvKYa;
+	sub dvK dvLa by dvKLa;
+	sub [dvL dvL.a] dvLa by dvLLa;
+} CJCT_VERT;
+
+lookup CJCT_FANCY { # Old style conjunct forms
+	ignore sub dvSs dvKRa';
+	sub dvKRa' by dvKRa.a;
+	sub dvKTRa' by dvKTRa.a;
+} CJCT_FANCY;
+
+lookup CJCT_HORZ { # Horizontal stacking conjunct forms
+	sub dvTRa by dvTRa.a;
+	sub dvTRYa by dvTRYa.a;
+} CJCT_HORZ;
+
+lookup XTRA_HORZ { # Horizontal stacking conjunct forms
+	sub dvKTRa by dvK dvTRa.a;
+	sub dvSTRa by dvS.a dvTRa.a;
+} XTRA_HORZ;
+
+lookup JHA_NEP_2 {
+	sub [dvJha.NEP dvJh.NEP] by [dvJha.NEP2 dvJh.NEP2];
+} JHA_NEP_2;
+
+lookup CONJUNCTS_TO_HALFS {
+	lookupflag MarkAttachmentType @VIRAMA;
+
+	sub dvGNYa by dvG dvN dvYa;
+	sub dvNyCYa by dvNy dvC dvYa;
+	sub dvNyJYa by dvNy dvJ.a dvYa;
+	sub dvTNYa by dvT dvN dvYa;
+	sub dvDhNYa by dvDh dvN dvYa;
+	sub dvNNYa by dvN dvN dvYa;
+
+	sub dvKNa by dvK dvNa;
+	sub dvKVa by dvK dvVa;
+	sub dvKhNa by dvKh dvNa;
+	sub dvGNa by dvG dvNa;
+	sub dvGhNa by dvGh dvNa;
+	sub dvCNa by dvC dvNa;
+	sub dvJNa by dvJ.a dvNa;
+	sub dvJhNa by dvJh dvNa;
+	sub dvNyCa by dvNy dvCa;
+	sub dvNyJa by dvNy dvJa;
+	sub dvTTa by dvT dvTa;
+	sub dvTNa by dvT dvNa;
+	sub dvDhNa by dvDh dvNa;
+	sub dvNNa by dvN dvNa;
+	sub dvPTta by dvP dvTta;
+	sub dvPTa by dvP dvTa;
+	sub dvPNa by dvP dvNa;
+	sub dvBNa by dvB dvNa;
+	sub dvMNa by dvM dvNa;
+	sub dvLKa by dvL dvKa;
+	sub dvShCa by dvSh dvCa;
+	sub dvShNa by dvSh dvNa;
+	sub dvShVa by dvSh dvVa;
+	sub dvSsTta by dvSs dvTta;
+	sub dvSsTtYa by dvSs dvTtYa;
+	sub dvSsTtha by dvSs dvTtha;
+	sub dvSsTthYa by dvSs dvTthYa;
+	sub dvSTRa by dvS dvTRa;
+	sub dvSTha by dvS dvTha;
+	sub dvSNa by dvS dvNa;
+} CONJUNCTS_TO_HALFS;
+
+lookup NTRA {
+	sub dvN dvTRa' by dvTRa.a; #MUST BE PLACED BEFORE IKARS!!!
+} NTRA;
+
+lookup IKARS_RESET {
+	sub dvIsign.a by dvIsign;
+	sub dvIsign.b by dvIsign;
+	sub dvIsign.c by dvIsign;
+	sub dvIsign.d by dvIsign;
+	sub dvIsign.e by dvIsign;
+	sub dvIsign.f by dvIsign;
+	sub dvIsign.g by dvIsign;
+	sub dvIsign.h by dvIsign;
+	sub dvIsign.i by dvIsign;
+	sub dvIsign.j by dvIsign;
+	sub dvIsign.k by dvIsign;
+	sub dvIsign.l by dvIsign;
+	sub dvIsign.m by dvIsign;
+	sub dvIsign.n by dvIsign;
+	sub dvIsign.o by dvIsign;
+	sub dvIsign.p by dvIsign;
+	sub dvIsign.q by dvIsign;
+	sub dvIsign.r by dvIsign;
+	sub dvIsign.s by dvIsign;
+	sub dvIsign.t by dvIsign;
+	sub dvIsign.u by dvIsign;
+	sub dvIsign.v by dvIsign;
+	sub dvIsign.w by dvIsign;
+	sub dvIsign.x by dvIsign;
+	sub dvIsign.y by dvIsign;
+	sub dvIsign.z by dvIsign;
+	sub dvIsign.A by dvIsign;
+	sub dvIsign.B by dvIsign;
+	sub dvIsign.C by dvIsign;
+	sub dvIsign.D by dvIsign;
+	sub dvIsign.E by dvIsign;
+	sub dvIsign.F by dvIsign;
+	sub dvIsign.G by dvIsign;
+	sub dvIsign.H by dvIsign;
+	sub dvIsign.I by dvIsign;
+	sub dvIsign.J by dvIsign;
+	sub dvIsign.K by dvIsign;
+	sub dvIsign.L by dvIsign;
+	sub dvIsign.M by dvIsign;
+} IKARS_RESET;
+
+lookup IKARS {
+	include (ikar.fea);
+} IKARS;
+
+#--------------------------------------
+feature pres { # Pre-base Substitutions
+
+	lookup PRES_CC;
+	lookup PRES_HALF;
+	lookup IKARS;
+
+} pres;
+
+#--------------------------------------
+feature abvs { # Above-Base Substitutions
+
+	lookup ABVS_LIGS;
+
+} abvs;
+
+#--------------------------------------
+@BLWS_USIGN_CXT = [dvJha dvDa dvHa dvDddha dvRha dvJhRa dvDRa dvHRa dvKSsRa dvKSsa dvJNya dvNgKRa dvNgKSsa dvTtTtYa dvTthTthYa dvDdDdYa dvDdhDdhYa dvDGRa dvDDYa dvDDhYa dvDBRa dvDBhYa dvDVYa dvDVRa dvSsTtYa dvSsTtVa dvSsTthYa dvHMYa dvNgKa dvNgKha dvNgGa dvNgGha dvNgMa dvChVa dvTtTta dvTtTtha dvTtDdha dvTtVa dvTthTtha dvDdTta dvDdDda dvDdDdha dvDdhDdha dvDGa dvDGha dvDDa dvDDha dvDNa dvDBa dvDBha dvDVa dvHNna dvHNa dvHMa dvHYa dvHLa dvHVa dvKSsMa dvKSsYa dvCChVa dvKKa dvKVa dvJhNa dvNyCa dvNyJa dvPTta dvMHa dvSsTta dvSsTtha];
+
+feature blws { # Below-Base Substitutions
+
+	lookup RAKAR_LIGS;
+	lookup CV_LIGS;
+
+	lookup BLWS_USIGN {
+		lookupflag MarkAttachmentType @BLWM;
+		sub @BLWS_USIGN_CXT [dvUsign dvUusign]' by [dvUsign.a dvUusign.a];
+	} BLWS_USIGN;
+
+} blws;
+
+#--------------------------------------
+feature psts { # Post-Base Substitutions
+
+	lookup NTRA;
+	lookup IIKARS {
+	#	glyphs taking default Iisign [dvJa dvSPRa dvDYa dvTRYa dvBRa dvYRa dvYyRa dvPTta dvQSha dvShRa dvSa dvYa.c2 dvYya dvNSha.MAR dvJha dvSYa dvZha dvKTYa dvLZa dvJNyYa dvShNa dvDdhYa dvNyCYa dvKYa dvSNa dvSsa dvCNa dvSTha dvDha dvShCa dvMNa dvDDa dvBSha dvDMa dvYa dvNgYa dvSsTtVa dvPa dvYya.c2 dvGRYa dvDhNa dvKJa dvZa dvHMYa dvKSsYa dvGhhRa dvVRa dvZRa dvDhNYa dvNyJYa dvNSha dvBNa dvNCa dvSRa dvDhRa dvLBha dvNNa dvTha dvJNa dvJhNa dvNnna.c2 dvSTRa dvBhRa dvJja dvBhRYa dvNySha dvKTRa dvLJa dvLa dvVa dvLTha dvHYa dvNa.c2 dvDdhDdhYa dvNnRa dvJRa dvCRa dvTa dvKSha dvYha dvSsTta dvKTVa dvThRa dvAasign dvShRYa dvMSha dvJhRa dvBha dvSha dvMRa dvDdYa dvA dvLRa dvDRYa dvMBha dvGRa dvKhRa dvKha dvTtYa dvTthTthYa dvGhNa dvDBhYa dvKhhRa dvNyRa dvPTa dvDdDdYa dvAa dvNnna dvZZa dvLCa dvNNYa dvBa dvNMa dvTRYa.a dvGga dvTYa dvTtTtYa dvGNa dvDVYa dvTNa dvNyJa dvGhha dvTTa dvKSsMa dvSsRa dvBba dvHMa dvGa dvSsTtYa dvTNYa dvTthYa dvDDhYa dvJNya dvNya dvKhNa dvKSha.MAR dvGhRa dvKSsRa dvDDYa dvNna dvSha.MAR dvKCa dvNRa dvJJa dvGNYa dvTRa.a dvChYa dvTRa dvMa dvPNa dvGha dvNBha dvKSsa dvCa dvNa dvNnnRa dvShVa dvPRa dvSsTthYa dvNyCa dvKhha dvTtDdha dvTtTta dvTtTtha dvSsTtha dvCCa dvHa dvMHa dvHNa dvHRa dvHNna dvDdDdha]
+	# glyphs taking medium length Iisign:
+		sub [dvTtVa dvDdDda dvDdTta dvDdhDdha dvDdda dvDda dvSDda dvDddha dvTta dvDBha dvHVa dvDVa dvDDha dvDGa dvDGha dvDGRa dvDBRa dvDVRa dvDBa dvHLa dvDRa dvDNa dvDa dvDdha dvRha dvDda.MAW dvRra dvRa dvTthTtha dvTtha dvLla dvLlla dvLa.MAR dvLLa dvCCha dvCChVa dvCha dvChVa dvNga] [dvIisign dvIisignReph dvIisignRephAnusvara]' by [dvIisign.m dvIisignReph.m dvIisignRephAnusvara.m];
+	# glyphs taking longest Iisign:
+		sub [dvNgGa dvNgKha dvNgKRa dvNgKa dvNgGha dvNgMa dvNgKSsa dvJha.NEP2 dvJha.NEP dvKTa dvKKa dvKNa dvKVa dvKTRa.a dvKa dvKLa dvQa dvLKa dvQRa dvKRa dvPhRa dvFRa dvKRa.a dvFa dvPha] [dvIisign dvIisignReph dvIisignRephAnusvara]' by [dvIisign.w dvIisignReph.w dvIisignRephAnusvara.w];
+	} IIKARS;
+
+} psts;
+
+#--------------------------------------
+feature ss01 { # Stylistic set 1: Devanagari alternate numerals
+	featureNames {
+		name 3 1 0x0409 "Devanagari \0967 \096B \096E \096F alternates (Devanagari 1 5 8 9)"; # English US
+		name 3 1 0x0809 "Devanagari \0967 \096B \096E \096F alternates (Devanagari 1 5 8 9)"; # English GB
+	};
+
+	lookup DEVA_NUMS_ALT {
+	sub [dvOne dvFive dvEight dvNine dvOne.tnum dvFive.tnum dvEight.tnum dvNine.tnum] by [dvOne.a dvFive.a dvEight.a dvNine.a dvOne.tnma dvFive.tnma dvEight.tnma dvNine.tnma];
+	} DEVA_NUMS_ALT;
+
+} ss01;
+
+#--------------------------------------
+feature ss02 { # Stylistic set 2: Nepali alternate Jha
+	featureNames {
+		name 3 1 0x0409 "Nepali \091D second alternate (Jha)"; # English US
+		name 3 1 0x0809 "Nepali \091D second alternate (Jha)"; # English GB
+	};
+
+	lookup IKARS_RESET;
+	lookup JHA_NEP_2;
+	lookup IKARS;
+	lookup IIKARS;
+
+} ss02;
+
+#--------------------------------------
+feature ss03 { # Stylistic set 3: Devanagari alternate Rvocal/Rrvocal
+	featureNames {
+		name 3 1 0x0409 "Devanagari \090B & \0960 alternates (Rvocal & Rrvocal)"; # English US
+		name 3 1 0x0809 "Devanagari \090B & \0960 alternates (Rvocal & Rrvocal)"; # English GB
+	};
+
+	lookup RVOCAL_ALTS {
+		sub [dvRvocal dvRrvocal dvRRvocal dvRRrvocal] by [dvRvocal.a dvRrvocal.a dvRRvocal.a dvRRrvocal.a];
+	} RVOCAL_ALTS;
+
+} ss03;
+
+#--------------------------------------
+feature ss04 { # Stylistic set 4: Devanagari stacking conjunct alternates
+	featureNames {
+		name 3 1 0x0409 "Devanagari stacking conjunct alternates"; # English US
+		name 3 1 0x0809 "Devanagari stacking conjunct alternates"; # English GB
+	};
+
+	lookup IKARS_RESET;
+	lookup CJCT_VERT;
+	lookup CJCT_FANCY;
+	lookup IKARS;
+	lookup IIKARS;
+
+} ss04;
+
+#--------------------------------------
+feature ss05 { # Stylistic set 5: Devanagari horizontal conjunct alternates
+	featureNames {
+		name 3 1 0x0409 "Devanagari horizontal conjunct alternates"; # English US
+		name 3 1 0x0809 "Devanagari horizontal conjunct alternates"; # English GB
+	};
+
+	lookup IKARS_RESET;
+	lookup CJCT_HORZ;
+	lookup XTRA_HORZ;
+	lookup IKARS;
+	lookup IIKARS;
+
+} ss05;
+
+#--------------------------------------
+feature ss06 { # Stylistic set 6: Devanagari simplified conjunct alternates
+	featureNames {
+		name 3 1 0x0409 "Devanagari simplified conjunct alternates"; # English US
+		name 3 1 0x0809 "Devanagari simplified conjunct alternates"; # English GB
+	};
+
+	lookup IKARS_RESET;
+	lookup CONJUNCTS_TO_HALFS;
+	lookup CJCT_HORZ;
+	lookup XTRA_HORZ;
+	lookup IKARS;
+	lookup IIKARS;
+
+} ss06;
+
+#--------------------------------------
+feature ss07 { # Stylistic set 7: Devanagari below- & post-base alternates
+	featureNames {
+		name 3 1 0x0409 "Devanagari below-base \0928/\0929 alternates & post-base \092F/\095F alternates (Na/Nnna & Ya/Yya)"; # English US
+		name 3 1 0x0809 "Devanagari below-base \0928/\0929 alternates & post-base \092F/\095F alternates (Na/Nnna & Ya/Yya)"; # English GB
+	};
+
+	lookup IKARS_RESET;
+	lookup NA_C2;
+	lookup YA_C2 {
+		lookupflag MarkAttachmentType @VIRAMA;
+		sub dvVirama dvYa by dvYa.c2;
+		sub dvVirama dvYya by dvYya.c2;
+	} YA_C2;
+	lookup IKARS;
+
+} ss07;
+
+#--------------------------------------
+feature calt { # Contextual alternates
+	lookup IKARS;
+} calt;
+
+#--------------------------------------
+feature salt { # Stylistic alternates
+	lookup DEVA_NUMS_ALT;
+	lookup CJCT_VERT;
+	lookup CJCT_FANCY;
+	lookup CJCT_HORZ;
+	lookup XTRA_HORZ;
+	lookup JHA_NEP_2;
+	lookup RVOCAL_ALTS;
+	lookup MATRAS_ALL {
+		sub dvIsign from [dvIsign.a dvIsign.b dvIsign.c dvIsign.d dvIsign.e dvIsign.f dvIsign.g dvIsign.h dvIsign.i dvIsign.j dvIsign.k dvIsign.l dvIsign.m dvIsign.n dvIsign.o dvIsign.p dvIsign.q dvIsign.r dvIsign.s dvIsign.t dvIsign.u dvIsign.v dvIsign.w dvIsign.x dvIsign.y dvIsign.z dvIsign.A dvIsign.B dvIsign.C dvIsign.D dvIsign.E dvIsign.F dvIsign.G dvIsign.H dvIsign.I dvIsign.J dvIsign.K dvIsign.L dvIsign.M];
+		sub dvIisign from [dvIisign.m dvIisign.w];
+		sub dvIisignReph from [dvIisignReph.m dvIisignReph.w];
+		sub dvIisignRephAnusvara from [dvIisignRephAnusvara.m dvIisignRephAnusvara.w];
+	} MATRAS_ALL;
+} salt;
+
+#--------------------------------------
+feature pnum { # Proportional figures
+	sub @FIGURES_LINING_TABULAR by @FIGURES_LINING_PROPORTIONAL;
+} pnum;
+
+#--------------------------------------
+feature tnum { # Tabular figures
+	sub @FIGURES_LINING_PROPORTIONAL by @FIGURES_LINING_TABULAR;
+} tnum;
+
+#--------------------------------------
+feature zero { # Slashed 0
+	sub zero by zero.0;
+	sub zero.pnum by zero.0p;
+} zero;
+
+#--------------------------------------
+feature liga {
+
+	sub f f i by f_f_i;
+	sub f f j by f_f_j;
+	sub f f l by f_f_l;
+	sub f f by f_f;
+	sub f i by f_i;
+	sub f j by f_j;
+	sub f l by f_l;
+
+} liga;
+
+#--------------------------------------
+feature size {
+	parameters 12.0 0; # design size, subfamily
+} size;

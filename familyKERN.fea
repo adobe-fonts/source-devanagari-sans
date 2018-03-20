@@ -1,0 +1,41 @@
+feature kern {
+
+script DFLT;
+	language dflt;
+
+		lookup KERNING {
+			lookupflag IgnoreMarks;
+			include (kern.fea);
+		} KERNING;
+		
+script dev2;
+	language dflt;
+		lookup KERNING;
+
+script deva;
+	language dflt;
+		lookup KERNING;
+
+script latn;
+	language dflt;
+		lookup KERNING;
+
+} kern;
+
+#--------------------------------------
+
+feature dist {
+
+script DFLT;
+	language dflt;
+		lookup KERNING;
+
+script dev2;
+	language dflt;
+		lookup KERNING;
+
+script deva;
+	language dflt;
+		lookup KERNING;
+
+} dist;

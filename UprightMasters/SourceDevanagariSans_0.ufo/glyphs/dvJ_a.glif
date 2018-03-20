@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dvJa" format="1">
+	<advance width="622"/>
+	<outline>
+		<contour>
+			<point x="-10" y="550" type="line"/>
+			<point x="-10" y="510" type="line"/>
+			<point x="632" y="510" type="line"/>
+			<point x="632" y="550" type="line"/>
+		</contour>
+		<contour>
+			<point x="502" y="381" type="line"/>
+			<point x="238" y="381" type="line"/>
+			<point x="238" y="338" type="line"/>
+			<point x="502" y="338" type="line"/>
+		</contour>
+		<contour>
+			<point x="251" y="98" type="curve" smooth="yes"/>
+			<point x="338" y="98"/>
+			<point x="397" y="154"/>
+			<point x="397" y="223" type="curve" smooth="yes"/>
+			<point x="397" y="304"/>
+			<point x="342" y="357"/>
+			<point x="280" y="375" type="curve"/>
+			<point x="274" y="347" type="line"/>
+			<point x="329" y="330"/>
+			<point x="355" y="285"/>
+			<point x="355" y="238" type="curve" smooth="yes"/>
+			<point x="355" y="187"/>
+			<point x="320" y="144"/>
+			<point x="248" y="144" type="curve" smooth="yes"/>
+			<point x="148" y="144"/>
+			<point x="82" y="250"/>
+			<point x="49" y="423" type="curve"/>
+			<point x="13" y="413" type="line"/>
+			<point x="48" y="225"/>
+			<point x="128" y="98"/>
+		</contour>
+		<contour>
+			<point x="494" y="0" type="line"/>
+			<point x="536" y="0" type="line"/>
+			<point x="536" y="529" type="line"/>
+			<point x="494" y="529" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.typemytype.robofont.layerData</key>
+			<dict>
+				<key>mask</key>
+				<dict>
+					<key>anchors</key>
+					<array>
+					</array>
+					<key>components</key>
+					<array>
+					</array>
+					<key>contours</key>
+					<array>
+					</array>
+					<key>lib</key>
+					<dict>
+					</dict>
+					<key>name</key>
+					<string>dvJa</string>
+					<key>unicodes</key>
+					<array>
+					</array>
+					<key>width</key>
+					<integer>622</integer>
+				</dict>
+			</dict>
+		</dict>
+	</lib>
+</glyph>

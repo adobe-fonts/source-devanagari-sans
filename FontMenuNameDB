@@ -1,0 +1,196 @@
+# [PostScriptName]
+# 	f=FamilyName
+# 	s=StyleName
+# 	l=Windows_Compatible_MenuName
+# 	m=1,Macintosh_Compatible_MenuName
+
+[SourceDevanagariSans-Light]
+	f=Source Devanagari Sans
+	s=Light
+	l=Source Devanagari Sans Light
+	m=1,Source Devanagari Sans Light
+	f=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x439,Light
+	l=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940 Light
+	f=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44E,Light
+	l=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940 Light
+	f=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x461,Light
+	l=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940 Light
+	f=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44F,Light
+	l=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940 Light
+
+	
+[SourceDevanagariSans-LightIt]
+	f=Source Devanagari Sans
+	s=Light Italic
+	l=Source Devanagari Sans Light
+	m=1,Source Devanagari Sans Light Italic
+	f=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x439,Light Italic
+	l=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940 Light Italic
+	f=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44E,Light Italic
+	l=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940 Light Italic
+	f=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x461,Light Italic
+	l=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940 Light Italic
+	f=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44F,Light Italic
+	l=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940 Light Italic
+
+	
+[SourceDevanagariSans-Regular]
+	f=Source Devanagari Sans
+	s=Regular
+	l=Source Devanagari Sans
+	m=1,Source Devanagari Sans
+	f=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x439,Regular
+	l=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	f=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44E,Regular
+	l=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	f=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x461,Regular
+	l=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	f=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44F,Regular
+	l=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+
+
+[SourceDevanagariSans-It]
+	f=Source Devanagari Sans
+	s=Italic
+	l=Source Devanagari Sans
+	m=1,Source Devanagari Sans Italic
+	f=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x439,Italic
+	l=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	f=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44E,Italic
+	l=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	f=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x461,Italic
+	l=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	f=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44F,Italic
+	l=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+
+
+[SourceDevanagariSans-Semibold]
+	f=Source Devanagari Sans
+	s=Semibold
+	l=Source Devanagari Sans Semibold
+	m=1,Source Devanagari Sans Semibold
+	f=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x439,Semibold
+	l=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940 Semibold
+	f=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44E,Semibold
+	l=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940 Semibold
+	f=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x461,Semibold
+	l=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940 Semibold
+	f=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44F,Semibold
+	l=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940 Semibold
+
+
+[SourceDevanagariSans-SemiboldIt]
+	f=Source Devanagari Sans
+	s=Semibold Italic
+	l=Source Devanagari Sans Semibold
+	m=1,Source Devanagari Sans Semibold Italic
+	f=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x439,Semibold Italic
+	l=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940 Semibold Italic
+	f=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44E,Semibold Italic
+	l=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940 Semibold Italic
+	f=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x461,Semibold Italic
+	l=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940 Semibold Italic
+	f=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44F,Semibold Italic
+	l=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940 Semibold Italic
+
+
+[SourceDevanagariSans-Bold]
+	f=Source Devanagari Sans
+	s=Bold
+	l=Source Devanagari Sans
+	m=1,Source Devanagari Sans Bold
+	f=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x439,Bold
+	l=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	f=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44E,Bold
+	l=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	f=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x461,Bold
+	l=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	f=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44F,Bold
+	l=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+
+
+[SourceDevanagariSans-BoldIt]
+	f=Source Devanagari Sans
+	s=Bold Italic
+	l=Source Devanagari Sans
+	m=1,Source Devanagari Sans Bold Italic
+	f=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x439,Bold Italic
+	l=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	f=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44E,Bold Italic
+	l=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	f=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x461,Bold Italic
+	l=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	f=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44F,Bold Italic
+	l=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+
+
+[SourceDevanagariSans-Black]
+	f=Source Devanagari Sans
+	s=Black
+	l=Source Devanagari Sans Black
+	m=1,Source Devanagari Sans Black
+	f=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x439,Black
+	l=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940 Black
+	f=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44E,Black
+	l=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940 Black
+	f=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x461,Black
+	l=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940 Black
+	f=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44F,Black
+	l=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940 Black
+
+
+[SourceDevanagariSans-BlackIt]
+	f=Source Devanagari Sans
+	s=Black Italic
+	l=Source Devanagari Sans Black
+	m=1,Source Devanagari Sans Black Italic
+	f=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x439,Black Italic
+	l=3,1,0x439,Source \0926\0947\0935\0928\093E\0917\0930\0940 Black Italic
+	f=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44E,Black Italic
+	l=3,1,0x44E,Source \0926\0947\0935\0928\093E\0917\0930\0940 Black Italic
+	f=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x461,Black Italic
+	l=3,1,0x461,Source \0926\0947\0935\0928\093E\0917\0930\0940 Black Italic
+	f=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940
+	s=3,1,0x44F,Black Italic
+	l=3,1,0x44F,Source \0926\0947\0935\0928\093E\0917\0930\0940 Black Italic
+
+

@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dvO" format="1">
-  <advance width="912"/>
-  <outline>
-    <component base="dvAa"/>
-    <component base="dvEsign" xOffset="912"/>
-  </outline>
-  <lib>
-    <dict>
-      <key>com.typemytype.robofont.layerData</key>
-      <dict>
-        <key>mask</key>
-        <dict>
-          <key>anchors</key>
-          <array>
-          </array>
-          <key>components</key>
-          <array>
-          </array>
-          <key>contours</key>
-          <array>
-          </array>
-          <key>lib</key>
-          <dict>
-          </dict>
-          <key>name</key>
-          <string>dvO</string>
-          <key>unicodes</key>
-          <array>
-          </array>
-          <key>width</key>
-          <integer>912</integer>
-        </dict>
-      </dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.4</real>
-        <real>0.8</real>
-        <real>1.0</real>
-        <real>1.0</real>
-      </array>
-    </dict>
-  </lib>
+	<advance width="912"/>
+	<outline>
+		<component base="dvAa"/>
+		<component base="dvEsign" xOffset="912"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.typemytype.robofont.layerData</key>
+			<dict>
+				<key>mask</key>
+				<dict>
+					<key>anchors</key>
+					<array>
+					</array>
+					<key>components</key>
+					<array>
+					</array>
+					<key>contours</key>
+					<array>
+					</array>
+					<key>lib</key>
+					<dict>
+					</dict>
+					<key>name</key>
+					<string>dvO</string>
+					<key>unicodes</key>
+					<array>
+					</array>
+					<key>width</key>
+					<integer>912</integer>
+				</dict>
+			</dict>
+			<key>com.typemytype.robofont.mark</key>
+			<array>
+				<real>0.4</real>
+				<real>0.8</real>
+				<integer>1</integer>
+				<integer>1</integer>
+			</array>
+		</dict>
+	</lib>
 </glyph>

@@ -1,0 +1,29 @@
+include (../../familyTables.fea);
+
+table OS/2 {
+	include (os2.fea);
+	include (../../familyOS2.fea);
+} OS/2;
+
+#--------------------------------------
+
+languagesystem DFLT dflt;
+
+languagesystem dev2 dflt;	# Devanagari 2
+languagesystem dev2 MAR;	# Marathi
+languagesystem dev2 NEP;	# Nepali
+languagesystem dev2 SAN;	# Sanskrit
+
+languagesystem deva dflt;	# Devanagari 1 (deprecated)
+languagesystem deva MAR;	# Marathi
+languagesystem deva NEP;	# Nepali
+languagesystem deva SAN;	# Sanskrit
+
+languagesystem latn dflt;	# Latin
+
+#--------------------------------------
+
+include (familyKERN.fea);
+include (markclasses.fea);
+include (familyGSUB.fea);
+include (familyGPOS.fea);
